@@ -1,8 +1,9 @@
 import { Link, Outlet } from "react-router";
-import rotas from "../rotas";
+import rotas from "../routes/rotas";
+import { ReactNode } from "react";
 
-function PublicLayout(){
-return (
+function PublicLayout({ children }: { children: ReactNode }) {
+  return (
     <div>
       <nav style={{ marginBottom: '20px' }}>
         <Link to={rotas.home}>Home</Link> |{' '}
@@ -10,6 +11,7 @@ return (
         <Link to={rotas.carrinho}>Carrinho</Link> |{' '}
         <Link to={rotas.login}>Login</Link>
       </nav>
+      {children}
       <Outlet />
     </div>
   )
