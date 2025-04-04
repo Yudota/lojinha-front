@@ -1,12 +1,13 @@
 import { Link, Outlet } from "react-router";
+import rotas from "../rotas";
 
 function PrivateLayout(){
-	return (
+ return (
     <div>
       <h2>Área do Cliente</h2>
       <nav style={{ marginBottom: '20px' }}>
-        <Link to="/painel">Painel</Link> |{' '}
-        <Link to="/checkout">Checkout</Link>
+        <Link to={rotas.painel}>Painel</Link> |{' '}
+        <Link to={rotas.checkout}>Checkout</Link>
       </nav>
       <Outlet />
     </div>
