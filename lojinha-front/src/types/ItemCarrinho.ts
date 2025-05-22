@@ -1,6 +1,5 @@
-export type ItemCarrinho = {
-	id: string
-	nome: string
-	quantidade: number
-	preco: number
+import Produto from "./Produto";
+
+export default interface ItemCarrinho extends Produto {
+  quantidade: number;
 }

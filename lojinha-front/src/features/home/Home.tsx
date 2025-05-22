@@ -1,12 +1,16 @@
 import PageWrapper from "../../components/PageWrapper";
-import { Button } from "../../components/ui/button";
+import Carrinho from "../carrinho/Carrinho";
+import ListaProdutos from "../produtos/ListaProdutos";
 
 function Home() {
-  return <PageWrapper title="Página Inicial">
-    Bem-vindo à loja!
-    <Button onClick={()=>window.alert('Clique')} >Teste</Button>
-  </PageWrapper>
+  return (
+    <PageWrapper title="Página Inicial">
+      Bem-vindo à loja!
+      <ListaProdutos />
+      <hr />
+      <Carrinho />
+    </PageWrapper>
+  );
 }
-
 
 export default Home;
